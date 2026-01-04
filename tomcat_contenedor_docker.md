@@ -21,3 +21,13 @@ Mediante el uso de un Dockerfile, realizaremos dicha acción. Los pasos son:
     ![](https://github.com/JavierMoralesSimon/tomcatContenedoresDocker/blob/main/Capturas/2.7.png)
 
 ## Diferencias entre el Tomcat nativo y el Tomcat en contenedor
+| Concepto                | Tomcat Nativo                                   | Tomcat en Contenedor                        |
+| ------------------------| ----------------------------------------------- | ------------------------------------------- |
+| Instalación             | Se instala directamente en el sistema operativo | Se ejecuta dentro de un contenedor Docker   |
+| Aislamiento             | Comparte recursos del host                      | Aislado, con recursos encapsulados          |
+| Portabilidad            | Depende del OS y configuración local            | Igual en cualquier máquina con Docker       |
+| Escalabilidad           | Manual, más difícil de replicar                 | Fácil de escalar con orquestadores (K8s)    |
+| Gestión de dependencias | Depende de Java y paquetes del host             | Incluye dependencias en la imagen           |
+| Actualizaciones         | Manual y propenso a inconsistencias             | Se actualiza regenerando la imagen          |
+| Reproducibilidad        | Puede variar entre entornos                     | Identica en dev, test y producción          |
+| Tiempo de arranque      | Rápido (si está bien configurado)               | Igual o más rápido dependiendo de la imagen |
